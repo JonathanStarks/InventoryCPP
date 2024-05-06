@@ -1,4 +1,6 @@
 #include <iostream>
+#include <string>
+#include <vector>
 
 /*
     Jonathan Starks
@@ -7,11 +9,18 @@
     - CPlusPlus.com
     - stackoverflow.com
     - codeacademy.com
+    - w3schools.com
 */
 
 // The inventory menu, it has options that relate to the items that you have.
 int inventory_menu()
 {
+    std::vector<std::string> user_inv
+    {
+        "+ Stick: Its a stick.",
+        "+ Rope: Made of tightly woven fibers.",
+        "+ Bottle (water): A glass bottle filled with water."
+    };
     int inv_nav = 0;
     std::cout << "========== INVENTORY MENU ==========" << std::endl;
     std::cout << "1. View items\n2. Return to main\n" << std::endl;
@@ -24,8 +33,8 @@ int inventory_menu()
     {
         // I will change this in the futute to stay in here until told to exit.
         std::cout << "========= INVENTORY MENU 2 =========" << std::endl;
-        std::cout << "Sorry, this is under construction." << std::endl;
-
+        for (int i = 0; i < user_inv.size(); i++)
+            std::cout << user_inv[i] << "\n";
         std::cout << "1. Inspect item\n2. Drop item\n" << std::endl;
     }
     else
@@ -47,7 +56,7 @@ int view_shop()
     // Items that the shop sells will appear here with a name and price.
     if (shop_nav == 1)
     {
-        std::cout << "Sorry, the shop is under construction." << std::endl;
+        std::cout << "Sorry, this is under construction." << std::endl;
     }
     else 
     {
@@ -68,6 +77,7 @@ int new_things()
 // This is the main part of the program, this is what runs.
 int main()
 {
+    
     std::string user_name = "";
     bool active = true;
     // Asks for the user's name and greets the user.
@@ -102,7 +112,4 @@ int main()
         }
         
     }
-    
-
-
 }
