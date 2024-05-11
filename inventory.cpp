@@ -2,18 +2,6 @@
 #include <string>
 #include <vector>
 #include <bits/stdc++.h>
-//#include <
-
-/*
-    Jonathan Starks
-
-    Helpful websites:
-    - CPlusPlus.com
-    - stackoverflow.com
-    - codeacademy.com
-    - w3schools.com
-    - geeksforgeeks.org
-*/
 
 std::vector<std::string> user_inv
     {
@@ -21,7 +9,6 @@ std::vector<std::string> user_inv
         " Rope",
         " Bottle (water)"
     };
-
 std::vector<std::string> item_desc
     {
         " Its a stick.",
